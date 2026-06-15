@@ -296,6 +296,118 @@
   display: block;
 }
 
+/* ---- JotForm embed + loading skeleton ---- */
+.jf-embed {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.jf-iframe {
+  width: 100%;
+  display: block;
+}
+
+.jf-skeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: #fafbfb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+.jf-skeleton.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.jf-skeleton-inner {
+  width: 100%;
+  max-width: 320px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: jf-pulse 1.4s ease-in-out infinite;
+}
+
+.jf-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.jf-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e2e8f0;
+}
+
+.jf-dot:nth-child(2) {
+  background: #cdd6e0;
+}
+
+.jf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.jf-label {
+  height: 12px;
+  width: 80px;
+  border-radius: 4px;
+  background: #e2e8f0;
+}
+
+.jf-label--wide {
+  width: 112px;
+}
+
+.jf-label--narrow {
+  width: 64px;
+}
+
+.jf-input {
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  background: #f1f4f7;
+  border: 1px solid #e6ebf0;
+}
+
+.jf-btn {
+  height: 44px;
+  width: 100%;
+  border-radius: 10px;
+  background: #e2e8f0;
+  margin-top: 4px;
+}
+
+.jf-loading-text {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+
+@keyframes jf-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
 /* ============================================================
    ANIMATIONS
    ============================================================ */
