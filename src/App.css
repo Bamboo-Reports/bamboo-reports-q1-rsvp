@@ -251,7 +251,7 @@
 .form-card {
   width: 100%;
   max-width: 460px;
-  background: var(--card);
+  background: #fafbfb;
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: clamp(18px, 2.6vh, 26px) clamp(18px, 1.8vw, 26px)
