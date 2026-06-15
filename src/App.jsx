@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import bambooLogo from './assets/bamboo-logo.svg'
+import JotFormEmbed from './JotFormEmbed'
 import './App.css'
 
 const INSIDE = [
@@ -22,25 +22,6 @@ const INSIDE = [
 ]
 
 function App() {
-  // Load JotForm's embed handler so the iframe sizes itself correctly.
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'
-    script.async = true
-    script.onload = () => {
-      if (window.jotformEmbedHandler) {
-        window.jotformEmbedHandler(
-          "iframe[id='JotFormIFrame-261652081057454']",
-          'https://form.jotform.com/'
-        )
-      }
-    }
-    document.body.appendChild(script)
-    return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
-
   return (
     <main className="stage">
       <div className="grain" aria-hidden="true" />
@@ -116,15 +97,10 @@ function App() {
               </p>
             </div>
             <div className="form-frame">
-              <iframe
-                id="JotFormIFrame-261652081057454"
+              <JotFormEmbed
+                formId="261652081057454"
                 title="RSVP - Q1 FY 26-27"
-                onLoad={() => window.parent.scrollTo(0, 0)}
-                allowTransparency="true"
-                allow="geolocation; microphone; camera; fullscreen; payment"
-                src="https://form.jotform.com/261652081057454"
-                frameBorder="0"
-                scrolling="no"
+                height="539px"
               />
             </div>
           </div>
