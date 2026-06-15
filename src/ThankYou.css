@@ -1,0 +1,129 @@
+/* ============================================================
+   Thank-you page — /thank-you
+   Reuses .stage / .grain / .reeds / tokens from App.css
+   ============================================================ */
+
+.stage--center {
+  text-align: center;
+}
+
+.thanks {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thanks-badge {
+  width: clamp(54px, 8vh, 68px);
+  height: clamp(54px, 8vh, 68px);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(140deg, var(--blue-bright), var(--blue));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.35) inset,
+    0 18px 34px -16px rgba(1, 122, 191, 0.6);
+  margin-bottom: clamp(16px, 2.6vh, 26px);
+  animation: fade-up 0.7s 0.12s both cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.thanks-badge svg {
+  width: 54%;
+  height: 54%;
+}
+
+.thanks-eyebrow {
+  align-self: center;
+  margin-bottom: clamp(10px, 1.6vh, 16px);
+  animation: fade-up 0.7s 0.18s both cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.thanks-title {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(30px, 4.4vw, 48px);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0 0 clamp(12px, 2vh, 18px);
+  animation: fade-up 0.8s 0.24s both cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.thanks-title em {
+  font-style: normal;
+  color: var(--blue);
+}
+
+.thanks-text {
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 42ch;
+  margin: 0 0 clamp(16px, 2.6vh, 24px);
+  animation: fade-up 0.8s 0.3s both cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.thanks-actions {
+  margin-top: clamp(8px, 1.5vh, 16px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  animation: fade-up 0.8s 0.42s both cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn-primary {
+  color: #fff;
+  background: var(--orange);
+  box-shadow: 0 12px 24px -12px rgba(241, 124, 29, 0.7);
+}
+
+.btn-primary:hover {
+  background: #ff8f33;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px -12px rgba(241, 124, 29, 0.8);
+}
+
+.btn-ghost {
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line-strong);
+}
+
+.btn-ghost:hover {
+  background: rgba(10, 14, 20, 0.04);
+}
+
+@media (max-width: 480px) {
+  .thanks-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+  }
+}

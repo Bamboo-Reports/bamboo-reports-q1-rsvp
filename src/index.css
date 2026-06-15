@@ -1,0 +1,57 @@
+:root {
+  /* Bamboo Reports brand palette — white, blue primary, orange accent */
+  --paper: #f6f9fc;
+  --paper-deep: #eef3f8;
+  --card: #ffffff;
+  --ink: #0a0e14;
+  --ink-soft: rgba(10, 14, 20, 0.66);
+  --ink-faint: rgba(10, 14, 20, 0.45);
+  --blue: #017abf;
+  --blue-bright: #1196e0;
+  --orange: #f17c1d;
+  --line: rgba(10, 14, 20, 0.1);
+  --line-strong: rgba(10, 14, 20, 0.18);
+
+  --sans: 'DM Sans', system-ui, sans-serif;
+
+  color-scheme: light;
+  font-family: var(--sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(
+      ellipse 80% 60% at 80% 12%,
+      rgba(1, 122, 191, 0.1),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 70% 70% at 6% 94%,
+      rgba(241, 124, 29, 0.08),
+      transparent 55%
+    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
