@@ -46,7 +46,7 @@ function App() {
             </span>
 
             <h1 className="headline">
-              Be first to the <br />
+              Be first to get the <br />
               <em>Q1 FY2026-27</em> GCC report.
             </h1>
 
